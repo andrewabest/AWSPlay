@@ -13,6 +13,8 @@ New-ELBLoadBalancer @loadBalancerParameters
 
 Get-ELBLoadBalancer
 
+# Remove-ELBLoadBalancer -LoadBalancerName "defaultLoadBalancer" -Force
+
 # Create a launch configuration
 # This defines the shapes of the instances that will be launched within an Auto Scale group
 $launchConfigurationParameters = @{
@@ -46,3 +48,5 @@ $autoScaleGroupParameters = @{
 New-ASAutoScalingGroup @autoScaleGroupParameters
 
 Get-ASAutoScalingGroup
+
+# Remove-ASAutoScalingGroup -AutoScalingGroupName "defaultScalingGroup" -ForceDelete $true -Force
