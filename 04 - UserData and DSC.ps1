@@ -92,7 +92,6 @@ $newInstance = New-EC2Instance @instanceParams
 # Once we have our new instance, we want to extract the DNS name and the administrator password.
 # Note that the DNS name is not returned from the New cmdlet, and can only be retrieved once the instance is running
 # Once we have these in our hot little hands, we can DSC away!
-# You'll need to remember where you stored your pem file from the keypair created in lesson 02.
 
 $instanceId = $newInstance.Instances[0].InstanceId
 
